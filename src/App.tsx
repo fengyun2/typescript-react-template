@@ -1,20 +1,26 @@
 import * as React from 'react';
-import './App.css';
 
-const logo = require('./logo.svg');
+import { Route, Switch, Redirect } from 'react-router-dom';
 
-class App extends React.Component {
-  render() {
+import allRoutes from './routes/all';
+
+class App extends React.Component<object, object> {
+  constructor(props: object) {
+    super(props);
+  }
+  render () {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+      <div className="content">
+            <Switch>
+              {
+                allRoutes.map((item: object, i: number) =>
+                  <Route key={i} {...item} />
+                )
+              }
+              <Redirect from="*" to="/" />
+            </Switch>
       </div>
+
     );
   }
 }
