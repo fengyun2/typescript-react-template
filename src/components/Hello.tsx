@@ -4,9 +4,11 @@ import './Hello.css';
 export interface Props {
   name: string;
   enthusiasmLevel?: number;
+  onIncrement?: () => void;
+  onDecrement?: () => void;
 }
 
-function Hello({name, enthusiasmLevel = 1}: Props) {
+function Hello({ name, enthusiasmLevel = 1, onIncrement, onDecrement }: Props) {
   if (enthusiasmLevel <= 0) {
     throw new Error('You could be a little more enthusiasmic. :D');
   }
@@ -14,6 +16,10 @@ function Hello({name, enthusiasmLevel = 1}: Props) {
     <div className="hello">
       <div className="greeting">
         Hello {name + getExclamationMarks(enthusiasmLevel)}
+      </div>
+      <div>
+        <button onClick={onDecrement}>-</button>
+        <button onClick={onIncrement}>+</button>
       </div>
     </div>
   );
