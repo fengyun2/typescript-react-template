@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { enthusiasm } from './reducers/index';
 import { StoreState } from './types/index';
-import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 import Main from './main';
 
@@ -18,8 +18,10 @@ const store = createStore<StoreState>(enthusiasm, {
 console.log('total-state: ', store.getState());
 ReactDOM.render(
   <Provider store={store}>
-    <Router><Main/></Router>
+    <Router>
+      <Main />
+    </Router>
   </Provider>,
-  document.getElementById('root') as HTMLElement
+  document.getElementById('app') as HTMLElement
 );
-registerServiceWorker();
+// registerServiceWorker();
