@@ -5,7 +5,6 @@ import {
 } from 'react-router-redux';
 
 import createHistory from 'history/createBrowserHistory';
-// import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './reducers';
 const history = createHistory();
 const middleware = routerMiddleware(history);

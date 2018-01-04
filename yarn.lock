@@ -72,12 +72,6 @@
   version "16.0.33"
   resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-16.0.33.tgz#ee0f7b4dc62eaae311f81ac01cb00bdb0ffcf58f"
 
-"@types/redux-devtools-extension@^2.13.2":
-  version "2.13.2"
-  resolved "http://registry.npm.taobao.org/@types/redux-devtools-extension/download/@types/redux-devtools-extension-2.13.2.tgz#b2e09a8c163b2b0f5072e6a5ac41474000df2111"
-  dependencies:
-    redux-devtools-extension "*"
-
 abbrev@1:
   version "1.1.1"
   resolved "http://registry.npm.taobao.org/abbrev/download/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -5146,10 +5140,6 @@ reduce-function-call@^1.0.1:
   resolved "http://registry.npm.taobao.org/reduce-function-call/download/reduce-function-call-1.0.2.tgz#5a200bf92e0e37751752fe45b0ab330fd4b6be99"
   dependencies:
     balanced-match "^0.4.2"
-
-redux-devtools-extension@*, redux-devtools-extension@^2.13.2:
-  version "2.13.2"
-  resolved "http://registry.npm.taobao.org/redux-devtools-extension/download/redux-devtools-extension-2.13.2.tgz#e0f9a8e8dfca7c17be92c7124958a3b94eb2911d"
 
 redux-observable@^0.17.0:
   version "0.17.0"
