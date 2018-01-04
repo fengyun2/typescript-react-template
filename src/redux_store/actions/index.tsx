@@ -1,7 +1,5 @@
 import * as constants from '../constants';
 
-console.log('constants: ', constants);
-
 export interface IncrementEnthusiasm {
   type: constants.INCREMENT_ENTHUSIASM;
 }

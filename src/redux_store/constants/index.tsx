@@ -1,3 +1,5 @@
+/* 定义常量、别名 */
+
 export const INCREMENT_ENTHUSIASM = 'INCREMENT_ENTHUSIASM';
 // 定义别名
 export type INCREMENT_ENTHUSIASM = typeof INCREMENT_ENTHUSIASM;
