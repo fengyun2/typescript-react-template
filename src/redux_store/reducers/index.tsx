@@ -3,10 +3,12 @@ import { combineReducers } from 'redux';
 
 /* reducers */
 import helloState from './hello';
+import homeState from './home';
 
 const rootReducer = combineReducers({
   routing,
-  helloState
+  helloState,
+  homeState
 });
 
 export default rootReducer;

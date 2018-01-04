@@ -7,3 +7,38 @@ export type INCREMENT_ENTHUSIASM = typeof INCREMENT_ENTHUSIASM;
 export const DECREMENT_ENTHUSIASM = 'DECREMENT_ENTHUSIASM';
 // 定义别名
 export type DECREMENT_ENTHUSIASM = typeof DECREMENT_ENTHUSIASM;
+
+/* cnode常量 */
+// 登录状态
+export const LOGIN_STATE = 'LOGIN_STATE';
+// 登入成功
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+// 正在登录
+export const LOGIN_ING = 'LOGIN_ING';
+// 注销登录
+export const LOGOUT = 'LOGOUT';
+
+/* Home */
+export const HOME_TAB = 'HOME_TAB';
+export const HOME_LOADING = 'HOME_LOADING';
+export const HOME_PAGE = 'HOME_PAGE';
+export const HOME_QUERY_SUCCESS = 'HOME_QUERY_SUCCESS';
+export const HOME_MORE_SUCCESS = 'HOME_MORE_SUCCESS';
+export const HOME_IS_LOGIN = 'HOME_IS_LOGIN';
+export const HOME_INIT = 'HOME_INIT';
+export const HOME_CLEAN = 'HOME_CLEAN';
+
+/* Detail */
+export const DETAIL_LOADING = 'DETAIL_LOADING';
+export const DETAIL_QUERY_SUCCESS = 'DETAIL_QUERY_SUCCESS';
+export const DETAIL_COLLECT_SUCCESS = 'DETAIL_COLLECT_SUCCESS';
+export const DETAIL_COMMENT_SUCCESS = 'DETAIL_COMMENT_SUCCESS';
+export const DETAIL_SET_REPLY_ID = 'DETAIL_SET_REPLY_ID';
+export const DETAIL_CONTENT = 'DETAIL_CONTENT';
+export const DETAIL_CLEAN = 'DETAIL_CLEAN';
+
+/* Recruit */
+export const RECRUIT_LOADING = 'RECRUIT_LOADING';
+export const RECRUIT_PAGE = 'RECRUIT_PAGE';
+export const RECRUIT_QUERY_SUCCESS = 'RECRUIT_QUERY_SUCCESS';
+export const RECRUIT_MORE_SUCCESS = 'RECRUIT_MORE_SUCCESS';

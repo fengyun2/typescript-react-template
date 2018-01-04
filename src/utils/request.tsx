@@ -29,11 +29,8 @@ export function getApi(url: string, headers: object = {}) {
   console.log(`get_request_url: ${url}`);
   const options = {
     method: 'GET',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({}),
+    headers: {},
+    // body: JSON.stringify({}),
   };
   // url = 'https://facebook.github.io/react-native/movies.json';
   return (
@@ -72,11 +69,8 @@ export function postApi(url: string, body: any) {
 export function requestHtml(url: string, headers: object = {}) {
   const options = {
     method: 'GET',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({}),
+    headers: {},
+    // body: JSON.stringify({}),
   };
   return fetch(url, options)
     .then(checkStatus)

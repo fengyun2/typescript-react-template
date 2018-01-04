@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "classnames": "^2.2.5",
+    "lazy-load-component": "^1.1.2",
     "moment": "^2.20.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -20,8 +22,10 @@
     "build": "poi build"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.3",
     "@types/enzyme": "^3.1.6",
     "@types/enzyme-adapter-react-16": "^1.0.1",
+    "@types/isomorphic-fetch": "^0.0.34",
     "@types/jest": "^22.0.0",
     "@types/node": "^8.5.2",
     "@types/react": "^16.0.31",

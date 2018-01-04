@@ -1,4 +1,35 @@
-.title {
-  font-size: 20px;
-  color: #f00;
+.container {
+  display: flex;
+  background: #f8f8f8;
+}
+.publishBox {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+.publish {
+  width: 44px;
+  height: 44px;
+}
+.tabsView {
+  display: flex;
+  background-color: #fff;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom-width: 0.5px;
+  border-color: #f0f0f0;
+}
+.tabView {
+  padding: 15px;
+}
+.tabText {
+  font-size: 14px;
+}
+.tabActive {
+  border-bottom-width: 1.5px;
+  border-color: #4181de;
+}
+.textActive {
+  font-weight: bold;
+  color: #4181de;
 }
