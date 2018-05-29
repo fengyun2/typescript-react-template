@@ -1,6 +1,11 @@
 ## 参考文档
 1.[https://github.com/Microsoft/TypeScript-React-Starter/](https://github.com/Microsoft/TypeScript-React-Starter/)
+
 2.[https://github.com/liujians/typescript-react-demo/blob/master/package.json](https://github.com/liujians/typescript-react-demo/blob/master/package.json)
+
+3. [https://github.com/YDJ-FE/ts-react-webpack4](https://github.com/YDJ-FE/ts-react-webpack4)
+
+4. [https://github.com/piotrwitek/react-redux-typescript-guide](https://github.com/piotrwitek/react-redux-typescript-guide)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
