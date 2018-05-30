@@ -1,4 +1,4 @@
-import {Options} from 'poi';
+import { Options } from 'poi';
 
 const options: Options = {
   entry: 'src/index.tsx',

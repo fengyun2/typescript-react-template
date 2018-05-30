@@ -1,0 +1,86 @@
+.navbar {
+  margin-bottom: 0;
+  z-index: 9;
+  width: 100%;
+  position: relative;
+  background-color: #444;
+  font-size: 13px;
+  overflow: visible;
+
+  .navbar-inner {
+    background-color: initial;
+    width: 90%;
+    margin: auto;
+    padding: 5px;
+  }
+
+  .container {
+    width: 100%;
+    min-width: 960px;
+    margin: 0 auto;
+    max-width: 1400px;
+  }
+
+  .brand {
+    display: block;
+    float: left;
+    width: 120px;
+    font-size: 20px;
+    margin-left: -20px;
+    padding: 3px 20px;
+    height: 34px;
+    line-height: 34px;
+    color: #ccc;
+    font-weight: 700;
+
+    img {
+      width: auto\9;
+      height: auto;
+      max-width: 100%;
+      vertical-align: inherit;
+      border: 0;
+      -ms-interpolation-mode: bicubic;
+    }
+  }
+
+  .navbar-search {
+    float: left;
+    margin-top: 6px;
+    margin-bottom: 0;
+  }
+
+  .search-query {
+    margin-top: 6px;
+    width: 206px;
+  }
+
+  .nav {
+    position: relative;
+    left: 0;
+    display: block;
+    margin: 0 10px 0 0;
+    list-style: none;
+
+    &.pull-right {
+      float: right;
+      margin-right: 0;
+    }
+
+    & > li {
+      float: left;
+      line-height: 20px;
+
+      & > a {
+        display: block;
+        text-shadow: none;
+        float: none;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: #ccc;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

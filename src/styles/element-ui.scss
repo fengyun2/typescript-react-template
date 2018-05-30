@@ -1,0 +1,188 @@
+//to reset element-ui default css
+.el-upload {
+  input[type='file'] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+//暂时性解决diolag 问题 https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+//element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+// loading
+.el-loading-mask {
+  z-index: 1000;
+}
+
+// message(ie9)
+.el-message {
+  display: block\9\0; // ie9
+  > .el-message__content {
+    display: inline-block\9\0;
+  }
+}
+
+.el-pagination {
+  font-weight: normal;
+}
+
+// pagination
+.pagination {
+  .el-pagination {
+    .el-button {
+      &.jump-page-btn {
+        margin-left: 24px;
+        &.el-button--primary {
+          color: #fff;
+          background-color: #409eff;
+          border-color: #409eff;
+          &:focus,
+          &:hover {
+            background: #66b1ff;
+            border-color: #66b1ff;
+            color: #fff;
+          }
+          &.is-active,
+          &:active {
+            background: #3a8ee6;
+            border-color: #3a8ee6;
+            color: #fff;
+          }
+          &:active {
+            outline: 0;
+          }
+          &.is-disabled,
+          &.is-disabled:active,
+          &.is-disabled:focus,
+          .is-disabled:hover {
+            color: #fff;
+            background-color: #a0cfff;
+            border-color: #a0cfff;
+          }
+        }
+      }
+    }
+    .el-pagination__jump {
+      .el-input.el-pagination__editor .el-input__inner {
+        line-height: 28px;
+      }
+    }
+  }
+}
+
+// btn
+
+.el-button--primary {
+  &.is-plain {
+    color: #0099ff;
+    background: #ecf5ff;
+    border-color: #b3d8ff;
+    &:focus,
+    &:hover,
+    &:active,
+    &.is-active {
+      color: #fff;
+      border-color: #0099ff;
+      background-color: #0099ff;
+    }
+  }
+
+  color: #fff;
+  background-color: #0099ff;
+  border-color: #0099ff;
+}
+
+// steps
+$step-wait-color: #c0c4cc;
+.el-steps {
+  width: 100%\9\0;
+  display: table\9\0;
+  .el-step {
+    display: table-cell\9\0;
+    width: 25%\9\0;
+    .el-step__icon {
+      text-align: center\9\0;
+      vertical-align: middle\9\0;
+    }
+    .el-step__title.is-wait {
+      .title {
+        color: $step-wait-color !important;
+      }
+    }
+
+    .el-step__description {
+      margin-top: 0;
+
+      &.is-wait {
+        .description {
+          color: $step-wait-color !important;
+          .time {
+            color: $step-wait-color !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.drug_flow_steps__wrap {
+  .el-steps {
+    .el-step {
+      width: 33.333333%\9\0;
+    }
+  }
+}
+
+// upload
+.avatar-uploader .el-upload {
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.avatar-uploader .el-upload:hover {
+  border-color: #409eff;
+}
+
+.hiddenIcon .el-upload--picture-card {
+  display: none;
+}
+
+// textarea
+.edit-recall {
+  .el-form-item__content {
+    // width: 500px;
+    .el-textarea__inner {
+      // padding-bottom: 29px;
+    }
+  }
+
+  .avatar-uploader {
+    .el-upload-list--picture-card {
+      .el-upload-list__item {
+        margin: 0 8px 0 0;
+        vertical-align: top;
+      }
+    }
+  }
+}

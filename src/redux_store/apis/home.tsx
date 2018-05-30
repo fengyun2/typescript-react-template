@@ -1,4 +1,5 @@
-import { getApi } from '../../utils/request';
+// import { getApi } from '../../utils/request';
+import request from '../../utils/request';
 import { moment } from '../../utils/tool';
 
 interface TopicsParams {
@@ -8,10 +9,13 @@ interface TopicsParams {
   mdrender?: boolean;
 }
 export function queryTopics(params: TopicsParams) {
-  const { page = 1, tab = 'all', limit = 20, mdrender = true } = params;
-  return getApi(
-    `/topics?page=${page}&limit=${limit}&tab=${tab}&mdrender=${mdrender}`
-  );
+  const {
+    page = 1,
+    tab = 'all',
+    limit = 20,
+    mdrender = true
+  } = params;
+  return request(`/topics?page=${page}&limit=${limit}&tab=${tab}&mdrender=${mdrender}`);
 }
 export function parseTopics(data: any) {
   const tabs = {
@@ -21,8 +25,11 @@ export function parseTopics(data: any) {
     share: '分享',
     job: '招聘',
     dev: '测试',
-    default: '暂无',
+    default: '暂无'
   };
+  console.log('====================================');
+  console.log('parseTopics: ', data);
+  console.log('====================================');
   const topics = data.map((topic: any) => {
     const create_at = moment(topic.create_at)
       .startOf('minute')
@@ -44,8 +51,17 @@ export function parseTopics(data: any) {
       tab = 'good';
     }
     const sort = tabs[tab];
-    const title = topic.title.replace(/[\r\n]/g, '');
-    return { ...topic, create_at, last_reply_at, tab, title, sort };
+    const title = topic
+      .title
+      .replace(/[\r\n]/g, '');
+    return {
+      ...topic,
+      create_at,
+      last_reply_at,
+      tab,
+      title,
+      sort
+    };
   });
   return topics;
 }
