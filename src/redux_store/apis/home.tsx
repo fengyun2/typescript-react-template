@@ -27,9 +27,7 @@ export function parseTopics(data: any) {
     dev: '测试',
     default: '暂无'
   };
-  console.log('====================================');
-  console.log('parseTopics: ', data);
-  console.log('====================================');
+
   const topics = data.map((topic: any) => {
     const create_at = moment(topic.create_at)
       .startOf('minute')
