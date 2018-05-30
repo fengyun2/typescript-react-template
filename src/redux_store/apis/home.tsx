@@ -63,3 +63,29 @@ export function parseTopics(data: any) {
   });
   return topics;
 }
+
+/* 获取单个主题 */
+export const getTopic = (params: any = {}) => {
+  const {
+    id = ''
+  } = params;
+  delete params.id;
+  return request({method: 'get', url: `/topic/${id}`, params});
+};
+
+export const Login = (params = {}) => request({method: 'post', url: '/accesstoken', data: params});
+
+export const getMessages = (params = {}) => request({method: 'get', url: '/messages', params: params});
+
+export const getUserInfo = (loginname = '') => request({method: 'get', url: `/user/${loginname}`});
+
+/* 新建主题 */
+export const addTopic = (params = {}) => request({method: 'post', url: '/topics', data: params});
+
+export const updateTopic = (params = {}) => request({method: 'post', url: '/topics/update', data: params});
+
+/* 收藏主题 */
+export const collectTopic = (params = {}) => request({method: 'post', url: '/topic_collect/collect', data: params});
+
+/* 取消主题 */
+export const delTopic = (params = {}) => request({method: 'post', url: '/topic_collect/de_collect', data: params});

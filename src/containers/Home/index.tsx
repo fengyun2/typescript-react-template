@@ -33,6 +33,12 @@ any > {
       .props
       .query({tab, page});
   }
+  toTopic = (topic: any) => {
+    this
+      .props
+      .history
+      .push('/topic/' + topic.id);
+  }
   render() {
     // const {tab} = this.props.homeState;
     const {
@@ -70,7 +76,10 @@ any > {
               ? <span className="put_top">置顶</span>
               : null}
 
-            <a className={styles.topic_title} title={topic.title}>{topic.title}</a>
+            <a
+              className={styles.topic_title}
+              title={topic.title}
+              onClick={item => this.toTopic(item)}>{topic.title}</a>
           </div>
         </div>
       ));

@@ -1,6 +1,7 @@
 // import * as React from 'react';
 
 import Home from '../containers/Home/index';
+import Topic from '../containers/Topic';
 import Recruit from '../containers/Recruit/index';
 import Message from '../containers/Message/index';
 import Zone from '../containers/Zone/index';
@@ -15,23 +16,23 @@ const routes = [
     exact: true,
     component: Home,
     icon: 'home'
-  },
-  {
+  }, {
+    name: '话题',
+    path: '/topic/:id',
+    component: Topic
+  }, {
     name: '招聘',
     path: '/recruit',
     component: Recruit
-  },
-  {
+  }, {
     name: '消息',
     path: '/message',
     component: Message
-  },
-  {
+  }, {
     name: '我的',
     path: '/zone',
-    component: Zone,
-  },
-  {
+    component: Zone
+  }, {
     name: '测试',
     path: '/dev',
     component: Hello
