@@ -24,7 +24,9 @@ const formateDate = (str: string) => {
   return `${year}年前`;
 };
 const city = {
-  one: ['北京市', '上海市', '广州市', '深圳市'],
+  one: [
+    '北京市', '上海市', '广州市', '深圳市'
+  ],
   new: [
     '成都市',
     '杭州市',
@@ -40,7 +42,7 @@ const city = {
     '郑州市',
     '大连市',
     '东莞市',
-    '宁波市',
+    '宁波市'
   ],
   two: [
     '厦门市',
@@ -72,7 +74,7 @@ const city = {
     '绍兴市',
     '中山市',
     '台州市',
-    '兰州市',
-  ],
+    '兰州市'
+  ]
 };
-export { formateDate, moment, city };
+export {formateDate, moment, city};
