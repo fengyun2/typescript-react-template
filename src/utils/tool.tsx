@@ -77,4 +77,10 @@ const city = {
     '兰州市'
   ]
 };
-export {formateDate, moment, city};
+
+const escape = (str: string = '') => {
+  return str
+    .replace(/<\/script/g, '<\\/script')
+    .replace(/<!--/g, '<\\!--');
+};
+export {formateDate, moment, city, escape};

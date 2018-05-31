@@ -1,11 +1,16 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
 import { Button } from 'antd';
 import classNames from 'classnames';
+import { escape } from '../../utils/tool';
+import { queryTopic } from '../../redux_store/actions/topic';
 import styles from './index.module.scss';
 
-class Topic extends React.PureComponent {
+class Topic extends React.PureComponent < any,
+any > {
   state = {
-    isMe: true
+    isMe: true,
+    id: ''
   };
   toCollect = () => {
     console.log('====================================');
@@ -27,8 +32,21 @@ class Topic extends React.PureComponent {
     console.log('删除');
     console.log('====================================');
   }
+  componentDidMount() {
+    const {id} = this.props.match.params;
+    this.setState({id});
+    const params = {
+      id
+    };
+    this
+      .props
+      .query(params);
+  }
   render() {
-    const topic: any = {};
+    const {
+      topic = {},
+      loading
+    } = this.props.topicState;
     return (
       <section className={styles.container}>
         <div>
@@ -58,9 +76,11 @@ class Topic extends React.PureComponent {
             )}
           </header >
           <div className={styles.topic}>
-            <div className={styles.topic_content}>
-              {topic.content}
-            </div>
+            <div
+              className={styles.topic_content}
+              dangerouslySetInnerHTML={{
+              __html: escape(topic.content)
+            }}/>
           </div>
         </div>
 
@@ -70,4 +90,14 @@ class Topic extends React.PureComponent {
   }
 }
 
-export default Topic;
+// export default Topic;
+
+const mapStateToProps = (state: {}) => {
+  return state;
+};
+const mapDispatchToProps = (dispatch: any) => {
+  return {
+    query: (params: any) => dispatch(queryTopic(params))
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Topic);

@@ -34,6 +34,9 @@ any > {
       .query({tab, page});
   }
   toTopic = (topic: any) => {
+    console.log('====================================');
+    console.log('topic：', topic);
+    console.log('====================================');
     this
       .props
       .history
@@ -47,7 +50,6 @@ any > {
       tab,
       loading
     } = this.props.homeState;
-    console.log(data, page, );
     let TopicList = null;
     if (Array.isArray(data) && data.length > 0) {
       TopicList = data.map(topic => (
@@ -79,7 +81,7 @@ any > {
             <a
               className={styles.topic_title}
               title={topic.title}
-              onClick={item => this.toTopic(item)}>{topic.title}</a>
+              onClick={_ => this.toTopic(topic)}>{topic.title}</a>
           </div>
         </div>
       ));
