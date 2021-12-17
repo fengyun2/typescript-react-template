@@ -6,7 +6,7 @@
     "antd": "^3.5.4",
     "axios": "^0.18.0",
     "classnames": "^2.2.5",
-    "dayjs": "^1.6.4",
+    "dayjs": "^1.10.7",
     "moment": "^2.22.1",
     "querystring": "^0.2.0",
     "react": "^16.2.0",
