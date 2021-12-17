@@ -7,7 +7,7 @@
     "axios": "^0.18.0",
     "classnames": "^2.2.5",
     "dayjs": "^1.6.4",
-    "moment": "^2.22.1",
+    "moment": "^2.29.1",
     "querystring": "^0.2.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
