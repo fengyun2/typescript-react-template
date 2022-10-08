@@ -4,23 +4,26 @@
   "private": true,
   "dependencies": {
     "antd": "^3.5.4",
-    "axios": "^0.18.0",
+    "axios": "^0.21.3",
     "classnames": "^2.2.5",
     "dayjs": "^1.6.4",
-    "moment": "^2.22.1",
+    "moment": "^2.29.4",
     "querystring": "^0.2.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
     "react-loadable": "^5.4.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^4.0.8",
     "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "start": "poi",
-    "build": "poi build"
+    "build": "poi build",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "@poi/plugin-typescript": "^10.1.2",
@@ -53,5 +56,6 @@
     "tslint-config-prettier": "^1.13.0",
     "tslint-react": "^3.3.3",
     "typescript": "^2.8.1"
-  }
+  },
+  "snyk": true
 }
